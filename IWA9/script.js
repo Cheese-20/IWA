@@ -1,7 +1,6 @@
 const salary = 4000;
-const lodging = 'apartment'
-const size = 'large'
-
+const lodging = 'apartment';
+const size = 'large';
 
 // Only change the syntax below (not the values or key names)
 
