@@ -2,7 +2,7 @@ const normalValue = "40";
 const Day3Discount = "20";
 const Day7Discount = "50";
 
-let numDays = "3";
+let numDays = "8";
 let total ="";
 
 if(numDays>=7){
