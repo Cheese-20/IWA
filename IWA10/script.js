@@ -103,5 +103,5 @@ const lastMonth = new Date(lastHolidayTimestamp).getMonth() +1; // converted the
 console.log(`${firstDay}/${firstMonth}/${currentYear}`);  // displaying dates 
 console.log(`${lastDay}/${lastMonth}/${currentYear}`);
 
-const randomHoliday = Math.floor(Math.random() *10); // getting a random value multiplyinging it by 10 to get a whole number
+let randomHoliday = Math.floor(Math.random() *10); // getting a random value multiplyinging it by 10 to get a whole number
 console.log(holidays[randomHoliday].date);  // displaying the date of the random holiday 
