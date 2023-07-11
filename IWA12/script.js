@@ -46,18 +46,18 @@ const checkin3 = document.querySelector('#book3 .checkin ');
 checkin1.style.color = "black";
 document.querySelector('#book1 .status').style.color =`${STATUS_MAP[status1].color}`; // changing the colours
 reserve1.disabled = STATUS_MAP[status1].canReserve ? false : true; 
-checkout1.disabled = STATUS_MAP[status1].canReserve ? false : true; 
-checkin1.disabled = STATUS_MAP[status1].canReserve ? false : true; 
+checkout1.disabled = STATUS_MAP[status1].canCheckout ? false : true; 
+checkin1.disabled = STATUS_MAP[status1].canCheckIn ? false : true; 
 
 
 checkin2.style.color = "black";
 document.querySelector('#book2 .status').style.color =`${STATUS_MAP[status2].color}`; // changing the colours
 reserve1.disabled = STATUS_MAP[status2].canReserve ? false : true; 
-checkout1.disabled = STATUS_MAP[status2].canReserve ? false : true; 
-checkin1.disabled = STATUS_MAP[status2].canReserve ? false : true; 
+checkout1.disabled = STATUS_MAP[status2].canCheckout ? false : true; 
+checkin1.disabled = STATUS_MAP[status2].canCheckIn ? false : true; 
 
 checkin3.style.color = "black";
 document.querySelector('#book3 .status').style.color =`${STATUS_MAP[status3].color}`; // changing the colours
 reserve1.disabled = STATUS_MAP[status3].canReserve ? false : true; 
-checkout1.disabled = STATUS_MAP[status3].canReserve ? false : true; 
-checkin1.disabled = STATUS_MAP[status3].canReserve ? false : true; 
+checkout1.disabled = STATUS_MAP[status3].canCheckout ? false : true; 
+checkin1.disabled = STATUS_MAP[status3].canCheckIn ? false : true; 
