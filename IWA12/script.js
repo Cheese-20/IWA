@@ -28,18 +28,18 @@ const STATUS_MAP = {
 // Edit below line 
 
 const status1 = document.querySelector('#book1 .status').innerHTML;  
-const reserve1 = document.querySelector('#book1 .reserve'); // getting the values from the html
+const reserve1 = document.querySelector('#book1 .reserve'); // getting the attributes from the html
 const checkout1 = document.querySelector('#book1  .checkout');
 const checkin1 = document.querySelector('#book1 .checkin ');
 
 
 const status2 = document.querySelector('#book2 .status').innerHTML;  
-const reserve2 = document.querySelector('#book2  .reserve'); // getting the values from the html
+const reserve2 = document.querySelector('#book2  .reserve'); // getting the attributes from the html
 const checkout2 = document.querySelector('#book2  .checkout');
 const checkin2 = document.querySelector('#book2 .checkin ');
 
 const status3 = document.querySelector('#book3 .status').innerHTML;  
-const reserve3 = document.querySelector('#book3  .reserve'); // getting the values from the html
+const reserve3 = document.querySelector('#book3  .reserve'); // getting the attributes from the html
 const checkout3 = document.querySelector('#book3  .checkout');
 const checkin3 = document.querySelector('#book3 .checkin ');
 
