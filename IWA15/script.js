@@ -8,35 +8,24 @@ const data = {
 
 // Only edit below
 
-const [first, firstNum] = data.lists[0];
-const [second, secondNum] = data.lists[1];
-const [third, thirdNum] = data.lists[2];
-let Val=0;
+const first  = data.lists[0][1] || {}
+const second = data.lists[1][1] || {}
+const third  = data.lists[2][1] || {}
 
+const result = []
 
-// const extractBiggest = () => {
-// 	for(i=0;i<= 15; i++){
-// 	if (firstNum[i] >= secondNum[i]) {console.log(secondNum[i])
-// 		return firstNum[i]
-// 	} else
-// 	if (thirdNum[i] <= secondNum[i]) {
-// 		return secondNum[i]
-// 	} else
-// 	return thirdNum[i]
-// }
-// }
 const extractBiggest = () => {
-  for (i = 0; i <= 15; i++) {
-    if (firstNum[i] > secondNum[i]) 
-	Val= firstNum[i];
-    else if (thirdNum[i] < secondNum[i]) 
-      Val= secondNum[i];
-     else Val= thirdNum[i];
-  }
-  return Val
+	if (first[first.length-1] > second[second.length-1]) {
+		return first.pop()
+	}
+    
+    if (second[second.length-1] > third[third.length-1]) {
+		return second.pop()
+	}
+    
+    return (third.pop())
 }
 
-const result = [Val]
 // Only edit above
 
 result.push(extractBiggest());
