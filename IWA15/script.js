@@ -1,49 +1,47 @@
 const data = {
-  lists: [
-    ["first", [15, 11, 13, 7, 5]],
-    ["second", [2, 6, 8, 4, 14, 12, 10]],
-    ["third", [9, 3, 1]],
-  ],
-};
+	lists: [
+		['first', [15, 11, 13, 7, 5]],
+		['second', [2, 6, 8, 4, 14, 12, 10]],
+		['third', [9, 3, 1]],
+	]
+}
 
 // Only edit below
 
-const first  = data.lists[0][1] || {}
-const second = data.lists[1][1] || {}
-const third  = data.lists[2][1] || {}
-
-const result = []
+const  [first, firstNum] = data.lists[0]; // destructuring by going into the first array from list and then going into the second array
+const  [second,secondNum]   = data.lists[1] ;
+const [third,thirdNum] = data.lists[2] ;
 
 const extractBiggest = () => {
-	if (first[first.length-1] > second[second.length-1]) {
-		return first.pop()
-	}
-    
-    if (second[second.length-1] > third[third.length-1]) {
-		return second.pop()
-	}
-    
-    return (third.pop())
+	if (firstNum[firstNum.length-1] > secondNum[secondNum.length-1])  // checking if the value is greater than popping it  
+		return firstNum.pop()  // pop is a function so it need to be called 
+    else
+	if (thirdNum[thirdNum.length-1] < secondNum[secondNum.length-1]) 
+		return secondNum.pop()
+    else
+	return thirdNum.pop()
+  
 }
+const result = []
 
 // Only edit above
 
-result.push(extractBiggest());
-result.push(extractBiggest());
-result.push(extractBiggest());
-result.push(extractBiggest());
-result.push(extractBiggest());
+result.push(extractBiggest())
+result.push(extractBiggest())
+result.push(extractBiggest())
+result.push(extractBiggest())
+result.push(extractBiggest())
 
-result.push(extractBiggest());
-result.push(extractBiggest());
-result.push(extractBiggest());
-result.push(extractBiggest());
-result.push(extractBiggest());
+result.push(extractBiggest())
+result.push(extractBiggest())
+result.push(extractBiggest())
+result.push(extractBiggest())
+result.push(extractBiggest())
 
-result.push(extractBiggest());
-result.push(extractBiggest());
-result.push(extractBiggest());
-result.push(extractBiggest());
-result.push(extractBiggest());
+result.push(extractBiggest())
+result.push(extractBiggest())
+result.push(extractBiggest())
+result.push(extractBiggest())
+result.push(extractBiggest())
 
-console.log(result);
+console.log(result)
