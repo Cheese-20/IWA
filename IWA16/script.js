@@ -77,13 +77,13 @@ const createHtml = (athlete) => {
   const  [first , second , third , fourth] = latestRace.time;
   let total = first + second + third + fourth;
 
-  const latestRaceTimeFormatted = `${String(Math.floor(total / 60)).padStart(
+  const TimeFormatted = `${String(Math.floor(total / 60)).padStart(
     2,
     "0"
   )}:${String(total % 60).padStart(2, "0")}`; 
 
-  const section = document.querySelector(`[data-athlete="${id}"]`);
-  section.innerHTML = `
+  const inner = document.querySelector(`[data-athlete="${id}"]`);
+  inner.innerHTML = `
       <h2>Athlete: ${id}</h2>
       <dl>
         <dt>Full name</dt>
@@ -93,7 +93,7 @@ const createHtml = (athlete) => {
         <dt>Event Date (Latest)</dt>
         <dd>${date} ${month} ${year}</dd>
         <dt>Total Time (Latest)</dt>
-        <dd>${latestRaceTimeFormatted}</dd>
+        <dd>${TimeFormatted}</dd>
       </dl>
     `;
 }; // displaying on the html
