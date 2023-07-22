@@ -57,39 +57,38 @@ const createData = () => {
       });
     }
   }
-
+console.log((result))
   return result;
 };
-console.log(createData())
+
 
 
 const addCell = (existing, classString, value) => {
   const result = `${existing}
-
         <td class="${classString}">
-            &nbsp;${value}&nbsp;
+            &nbsp;${value}&nbsp
         </td>`;
 
   return result;
 };
 
 const createHtml = (data) => {
-    let result = ''
+    let result = '';
 
     for (const { week,days} of data) {
-        let inner = ""
-        inner = addCell(inner, 'table__cell table__cell_sidebar', `Week ${week}`)
+        let inner = "";
+        inner = addCell(inner, 'table__cell table__cell_sidebar', `Week ${week}`);
 
         for (const { dayOfWeek, value } of days) { 
-            let classString = 'table__cell'
+            let classString = 'table__cell';
             const isToday = new Date().getDate() === value;
             const isWeekend = dayOfWeek === 0 || dayOfWeek === 6 ; 
-            const isAlternate = week % 2 === 0
+            const isAlternate = week % 2 === 0;
 
-            if (isToday) classString = `${classString} table__cell_today`
-            if (isWeekend) classString = `${classString} table__cell_weekend`
-            if (isAlternate) classString = `${classString} table__cell_alternate`
-            inner = addCell(inner,classString,value)
+            if (isToday) classString = `${classString} table__cell_today`;
+            if (isWeekend) classString = `${classString} table__cell_weekend`;
+            if (isAlternate) classString = `${classString} table__cell_alternate`;
+            inner = addCell(inner,classString,value);
         }
 
         result = `
@@ -103,8 +102,8 @@ const createHtml = (data) => {
 
 // Only edit above
 
-const current = new Date()
-document.querySelector('[data-title]').innerText = `${MONTHS[current.getMonth()]} ${current.getFullYear()}`
+const current = new Date();
+document.querySelector('[data-title]').innerText = `${MONTHS[current.getMonth()]} ${current.getFullYear()}`;
 
-const data = createData()
-document.querySelector('[data-content]').innerHTML = createHtml(data)
+const data = createData();
+document.querySelector('[data-content]').innerHTML = createHtml(createData());
