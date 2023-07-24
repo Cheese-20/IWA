@@ -41,9 +41,13 @@ const handleDragOver = (event) => {
   updateDraggingHtml({ over: column });
 };
 
-const handleDragStart = (event) => {};
+const handleDragStart = (event) => {
 
-const handleDragEnd = (event) => {};
+};
+
+const handleDragEnd = (event) => {
+
+};
 
 // displays the help dialog
 const handleHelpToggle = (event) => {
@@ -87,7 +91,6 @@ const handleAddSubmit = (event) => {
   document
     .querySelector('[data-column="ordered"]')
     .appendChild(createOrderHtml(createOrderData(order)));
-  html.add.overlay.close();
   html.add.form.reset();
 };
 
