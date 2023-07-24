@@ -31,7 +31,7 @@ const createArray = (length) => {
 
 const createData = () => {
   const current = new Date();
-  current.setDate();
+  current.setDate(1);
 
   const startDay = current.getDate();
   const daysInMonth = getDaysInMonth(current);
@@ -106,4 +106,4 @@ const current = new Date();
 document.querySelector('[data-title]').innerText = `${MONTHS[current.getMonth()]} ${current.getFullYear()}`;
 
 const data = createData();
-document.querySelector('[data-content]').innerHTML = createHtml(createData());
+document.querySelector('[data-content]').innerHTML = createHtml(data);
