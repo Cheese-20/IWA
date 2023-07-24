@@ -47,17 +47,15 @@ const createData = () => {
   }
 
   for (const dayIndex of days) {
-    const day = dayIndex - startDay;
+    const day =  daysInMonth - dayIndex ;
     const isValid = day > 0 && day <= daysInMonth;
-
     for (let j = 0; j <= result.length - 1; j++) {
       result[j].days.push({
-        dayOfWeek: dayIndex,
+        dayOfWeek: day,
         value: isValid ? day : "",
       });
     }
   }
-console.log((result))
   return result;
 };
 
