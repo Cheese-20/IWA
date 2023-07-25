@@ -41,12 +41,20 @@ const handleDragOver = (event) => {
   updateDraggingHtml({ over: column });
 };
 
-const handleDragStart = (event) => {
-
-};
+const handleDragStart = (event) => {};
 
 const handleDragEnd = (event) => {
-
+  event.preventDefault()
+   let data = document.querySelectorAll(':hover'); 
+   let column
+   for (let i = 0; i < data.length; i++) {
+       console.log(data[i].dataset.area)
+       if(data[i].dataset.area) {
+           column = data[i].dataset.area
+           break
+       }
+   }
+   moveToColumn(event.srcElement.dataset.id, column)
 };
 
 // displays the help dialog
